@@ -10,16 +10,29 @@
 <div>{{isHappy}}</div>
 <div>{{!isHappy}}</div>
 <div>{{isHappy? ':)' : ':('}}</div>
-<input type="text" [value]= "name">
 <input 
   type="text" 
-  [value]= "name"
+  [ngModel]="name"
   (input)="handleInput($event)"
   (blur)="handleBlur($event)">
 <div>{{name}}</div>
 <button (click)="handleClick()">
   reset name!
 </button>
+<br/>
+<input 
+  type="text" 
+  [ngModel]="name2"
+  (ngModelChange)="handleChange($event)">
+<div>{{name2}}</div>
+
+
+<input 
+  type="text" 
+  [(ngModel)]="name3">
+<div>{{name3}}</div>
+
+
 <br/>
 <img [src]="logo" alt="logo">
 

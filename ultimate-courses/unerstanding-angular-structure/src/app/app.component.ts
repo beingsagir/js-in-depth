@@ -1,4 +1,5 @@
 import { Component } from "@angular/core"
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -14,6 +15,8 @@ export class AppComponent{
 
   isHappy: Boolean = true;
   name: string = 'Sagir';
+  name2: string = 'Sagir2';
+  name3: string = 'Sagir3';
   title= "Hello World"
   logo: string = "assets/img/logo.png";
 
@@ -30,5 +33,9 @@ export class AppComponent{
   handleClick(){
     console.log("I am here");
     this.name = "Sagiruddin Mondal";
+  }
+
+  handleChange(value: string){
+    this.name2 = value;
   }
 }
